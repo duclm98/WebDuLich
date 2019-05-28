@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-require('dotenv').config();
+
 /**
  * Module dependencies.
  */
@@ -7,36 +7,28 @@ require('dotenv').config();
 var app = require('../app');
 var debug = require('debug')('webclient:server');
 var http = require('http');
-const {initdb} = require('../dbs');
 
-var server;
+/**
+ * Get port from environment and store in Express.
+ */
+
 var port = normalizePort(process.env.PORT || '3000');
-initdb().then(() => {
-  /**
-   * Get port from environment and store in Express.
-   */
-  app.set('port', port);
+app.set('port', port);
 
-  /**
-   * Create HTTP server.
-   */
+/**
+ * Create HTTP server.
+ */
 
-  server = http.createServer(app);
+var server = http.createServer(app);
 
-  /**
-   * Listen on provided port, on all network interfaces.
-   */
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 
-  server.listen(port);
-  server.on('error', onError);
-  server.on('listening', onListening);
-  })
-  .catch(err => {
-    console.error('Failed to make all database connections!')
-    console.error(err)
-    process.exit(1)
-  });
-  
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
 /**
  * Normalize a port into a number, string, or false.
  */
