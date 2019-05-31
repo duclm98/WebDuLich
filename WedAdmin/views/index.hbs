@@ -1,2 +1,45 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+        <a href="#">Danh sách địa danh</a>
+        </li>
+    </ol>
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+        <i class="fas fa-table"></i>
+        Danh sách địa danh</div>
+        <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tên địa danh</th>
+                    <th>Vị trí</th>
+                    <th>Mô tả</th>
+                    <th>Bản đồ</th>
+                    <th>Hình ảnh</th>
+                    <th>Video</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#if data}}
+                {{#each data}}
+                <tr>
+                    <th scope="row">{{this.ten}}</th>
+                    <td>{{this.viTri}}</td>
+                    <td>{{this.moTa}}</td>
+                    <td>{{this.banDo}}</td>
+                    <td>{{this.hinhAnh}}</td>
+                    <td>{{this.video}}</td>
+                </tr>
+                {{/each}}
+                {{/if}}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
