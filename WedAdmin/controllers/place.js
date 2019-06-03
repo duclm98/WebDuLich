@@ -1,6 +1,5 @@
 const place = require('../models/place');
 
-
 exports.list = async (req, res, next) => {
     const data = await place.list();
     res.render('place/list', { data })

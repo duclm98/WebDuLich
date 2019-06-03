@@ -16,8 +16,8 @@ module.exports.add = async (place) => {
     return await dbs.production.collection('places').insertOne(place);
 };
 
-module.exports.update = async (id,product) => {
-    return await dbs.production.collection('places').updateOne({ _id: ObjectId(id)},{$set: product});
+module.exports.update = async (id,place) => {
+    return await dbs.production.collection('places').updateOne({ _id: ObjectId(id)},{$set: place});
 };
 
 module.exports.delete = async (id) => {
