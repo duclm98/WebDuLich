@@ -4,7 +4,7 @@
         <li class="breadcrumb-item">
         <a href="#">Quản lí nhà hàng</a>
         </li>
-        <li class="breadcrumb-item active">Danh sách nhà hàng</li>
+        <li class="breadcrumb-item active">Xóa nhà hàng</li>
     </ol>
 
     <!-- DataTables Example -->
@@ -25,6 +25,7 @@
                     <th>Địa chỉ nhà hàng</th>
                     <th>Giá trung bình của nhà hàng (VNĐ)</th>
                     <th>Mô tả về nhà hàng</th>
+                    <th>Xóa</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,12 +34,13 @@
                 <tr>
                     <th scope="row">{{this.tenDiaDanh}}</th>
                     <td>{{this.viTriDiaDanh}}</td>
-                    <td>{{this.ten}}</td>
+                    <td scope="row">{{this.ten}}</td>
                     <td>{{this.sdt}}</td>
                     <td>{{this.email}}</td>
                     <td>{{this.diaChi}}</td>
                     <td>{{this.gia}}</td>
                     <td>{{this.moTa}}</td>
+                    <td><a href="/restaurant/delete/{{this._id}}">Xóa</a></td>
                 </tr>
                 {{/each}}
                 {{/if}}

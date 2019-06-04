@@ -1,0 +1,129 @@
+<ol class="breadcrumb">
+        <li class="breadcrumb-item">
+        <a href="#">Quản lí khách sạn</a>
+        </li>
+        <li class="breadcrumb-item active">Chỉnh sửa thông tin khách sạn</li>
+</ol>
+
+<div class="container">
+    <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Chỉnh sửa thông tin khách sạn</div>
+        <div class="card-body">
+        <form method="POST" action="/hotel/edit/{{data._id}}">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.ten}}" name="ten" id="ten" class="form-control" placeholder="Tên khách sạn" required="required" autofocus="autofocus">
+                            <label for="ten">Tên khách sạn</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.diaChi}}" name="diaChi" id="diaChi" class="form-control" placeholder="Địa chỉ khách sạn" required="required" autofocus="autofocus">
+                            <label for="diaChi">Địa chỉ khách sạn</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.sdt}}" name="sdt" id="sdt" class="form-control" placeholder="Số điện thoại" required="required" autofocus="autofocus">
+                            <label for="sdt">Số điện thoại</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="email" value="{{data.email}}" name="email" id="email" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.moTa}}" name="moTa" id="moTa" class="form-control" placeholder="Mô tả" required="required" autofocus="autofocus">
+                            <label for="moTa">Mô tả</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.single}}" name="single" id="single" class="form-control" placeholder="Giá phòng đơn (VNĐ)" required="required" autofocus="autofocus">
+                            <label for="single">Giá phòng đơn (VNĐ)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.double}}" name="double" id="double" class="form-control" placeholder="Giá phòng đôi (VNĐ)" required="required" autofocus="autofocus">
+                            <label for="double">Giá phòng đôi (VNĐ)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.queen}}" name="queen" id="queen" class="form-control" placeholder="Giá phòng queen (VNĐ)" required="required" autofocus="autofocus">
+                            <label for="queen">Giá phòng queen (VNĐ)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.king}}" name="king" id="king" class="form-control" placeholder="Giá phòng king (VNĐ)" required="required" autofocus="autofocus">
+                            <label for="king">Giá phòng king (VNĐ)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.tenDiaDanh}}" name="tenDiaDanh" id="tenDiaDanh" class="form-control" placeholder="Thuộc địa danh" required="required" autofocus="autofocus" disabled>
+                            <label for="tenDiaDanh">Thuộc địa danh</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <input type="text" value="{{data.viTriDiaDanh}}" name="viTriDiaDanh" id="viTriDiaDanh" class="form-control" placeholder="Vị trí địa danh" required="required" autofocus="autofocus" disabled>
+                            <label for="viTriDiaDanh">Vị trí địa danh</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa"></i> Chỉnh sửa
+            </button>
+        </form>
+      </div>
+    </div>
+</div>

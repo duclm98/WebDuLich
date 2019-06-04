@@ -2,7 +2,7 @@
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-        <a href="#">Danh sách địa danh</a>
+        <a href="#">Trang chủ</a>
         </li>
     </ol>
 
@@ -31,9 +31,9 @@
                     <th scope="row">{{this.ten}}</th>
                     <td>{{this.viTri}}</td>
                     <td>{{this.moTa}}</td>
-                    <td>{{this.banDo}}</td>
-                    <td>{{this.hinhAnh}}</td>
-                    <td>{{this.video}}</td>
+                    <td><a href="{{this.banDo}}">{{this.banDo}}</a></td>
+                    <td><a href="{{this.hinhAnh}}">{{this.hinhAnh}}</a></td>
+                    <td><a href="{{this.video}}">{{this.video}}</a></td>
                 </tr>
                 {{/each}}
                 {{/if}}

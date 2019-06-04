@@ -12,6 +12,11 @@ module.exports.list = async () => {
     .toArray();
 };
 
+module.exports.listByIdPlace = async (id) => {
+  return await dbs.production.collection('restaurants').find({idDiaDanh:id})
+    .toArray();
+};
+
 module.exports.add = async (restaurant) => {
     return await dbs.production.collection('restaurants').insertOne(restaurant);
 };
