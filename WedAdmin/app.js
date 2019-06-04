@@ -6,7 +6,7 @@ var logger = require('morgan');
 var favicon = require('serve-favicon');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var userRouter = require('./routes/user');
 var placeRouter = require('./routes/place');
 var restaurantRouter = require('./routes/restaurant');
 var hotelRouter = require('./routes/hotel');
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', userRouter);
 app.use('/place', placeRouter);
 app.use('/restaurant', restaurantRouter);
 app.use('/hotel', hotelRouter);

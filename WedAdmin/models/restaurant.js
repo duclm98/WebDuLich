@@ -27,6 +27,6 @@ module.exports.update = async (id,restaurant) => {
 
 module.exports.delete = async (id) => {
     return await dbs.production.collection('restaurants').deleteOne({ _id: ObjectId(id)});
-  };
+};
 
 exports.detail = detail;

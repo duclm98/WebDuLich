@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+        <a href="#">Quản lí người dùng</a>
+        </li>
+        <li class="breadcrumb-item active">Danh sách người dùng</li>
+    </ol>
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+        <i class="fas fa-table"></i>
+        Danh sách người dùng</div>
+        <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tên người dùng</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#if data}}
+                {{#each data}}
+                <tr>
+                    <th scope="row">{{this.ten}}</th>
+                    <td>{{this.email}}</td>
+                </tr>
+                {{/each}}
+                {{/if}}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>

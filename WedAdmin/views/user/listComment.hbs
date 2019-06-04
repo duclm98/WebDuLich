@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+        <a href="#">Quản lí nhận xét</a>
+        </li>
+        <li class="breadcrumb-item active">Danh sách nhận xét</li>
+    </ol>
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+        <i class="fas fa-table"></i>
+        Danh sách nhận xét</div>
+        <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tên người dùng</th>
+                    <th>Email</th>
+                    <th>Tên địa danh</th>
+                    <th>Nhận xét</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#if data}}
+                {{#each data}}
+                <tr>
+                    <th scope="row">{{this.tenUser}}</th>
+                    <td>{{this.email}}</td>
+                    <td>{{this.tenDiaDanh}}</td>
+                    <td>{{this.nhanXet}}</td>
+                </tr>
+                {{/each}}
+                {{/if}}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
