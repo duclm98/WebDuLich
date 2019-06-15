@@ -12,3 +12,7 @@ exports.detail = detail;
 module.exports.list = async () => {
     return await dbs.production.collection(HOTELS).find().toArray();
 };
+
+module.exports.listByIdDiaDanh = async (idDiaDanh) => {
+  return await dbs.production.collection(HOTELS).find({idDiaDanh}).toArray();
+};
