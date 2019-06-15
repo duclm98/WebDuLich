@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5cf69d4e22ad1a1c783b7264"},"nhanXet":"Địa điểm du lịch hoàn hảo","pheDuyet":1,"idUser":"5cf6860022ad1a1c783b725c","tenUser":"Lê Minh Đức","email":"012345@gmail.com","idDiaDanh":"5cf14ee7dbf7971788defd66","tenDiaDanh":"Thành phố Đà Lạt"}
+{"_id":{"$oid":"5cf7da9b06a1b01d00dfa005"},"nhanXet":"Phong cảnh đẹp, con người thân thiện","tenUser":"Hồ Ngọc Đỉnh","idDiaDanh":"5cf61817740f6601c05442ce","tenDiaDanh":"Thành phố biển Nha Trang","pheDuyet":0,"email":"hongocdinh@gmail.com"}

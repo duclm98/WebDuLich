@@ -1,0 +1,11 @@
+﻿Chạy cmd với quyền admin
+
+cd C:\Users\HOME\Desktop\mongodb-4.0.9\bin
+
++export
+mongoexport --db travel--collection places--out travel/places.js
+
++import
+mongoimport -d travel -c places travel/places.js
+
+Với travel là database, places là collection
