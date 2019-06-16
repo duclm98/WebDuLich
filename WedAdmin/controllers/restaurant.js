@@ -30,6 +30,7 @@ exports.addPost = async (req, res, next) => {
         email:req.body.email,
         gia:req.body.gia,
         moTa:req.body.moTa,
+        hinhAnh:req.body.hinhAnh,
         idDiaDanh:id,
         tenDiaDanh:diaDanh.ten,
         viTriDiaDanh:diaDanh.viTri

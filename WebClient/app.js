@@ -8,6 +8,8 @@ var favicon = require('serve-favicon');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var placeRouter = require('./routes/place');
+var hotelRouter = require('./routes/hotel');
+var restaurantRouter = require('./routes/restaurant');
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/place', placeRouter);
+app.use('/hotel', hotelRouter);
+app.use('/restaurant', restaurantRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

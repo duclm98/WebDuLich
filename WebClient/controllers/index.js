@@ -8,3 +8,12 @@ exports.home = async (req, res, next) => {
     const restaurants = await restaurant.list();
     res.render('index', {places,hotels,restaurants}); 
 };
+
+exports.search = async (req, res, next) => {
+    const key =req.body.key;
+    console.log(key);
+    const places = await place.search(key);
+    const hotels = await hotel.list();
+    const restaurants = await restaurant.list();
+    res.render('index', {places,hotels,restaurants}); 
+};

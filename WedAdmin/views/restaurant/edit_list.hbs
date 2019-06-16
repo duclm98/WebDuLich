@@ -25,6 +25,7 @@
                     <th>Địa chỉ nhà hàng</th>
                     <th>Giá trung bình của nhà hàng (VNĐ)</th>
                     <th>Mô tả về nhà hàng</th>
+                    <th>Hình ảnh</th>
                     <th>Sửa</th>
                 </tr>
                 </thead>
@@ -40,6 +41,7 @@
                     <td>{{this.diaChi}}</td>
                     <td>{{this.gia}}</td>
                     <td>{{this.moTa}}</td>
+                    <td><a href="{{this.hinhAnh}}">{{this.hinhAnh}}</a></td>
                     <td><a href="/restaurant/edit/{{this._id}}">Sửa</a></td>
                 </tr>
                 {{/each}}

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate mb-5 pb-5 text-center text-md-left" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{PLACE.ten}}</h1>
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Chào mừng bạn đến với<br><strong><a href="#">{{PLACE.ten}}</a></strong></h1>
             </div>
         </div>
     </div>
@@ -44,15 +44,15 @@
             </ul>
             <ul class="ml-md-5">
                 <h4>Đăng nhận xét</h4>
-                <form id="comments">
+                <form method="POST" action="/place/comment/{{PLACE._id}}" id="comments">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" name="tenUser" class="form-control" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nhận xét">
+                        <input type="text" name="nhanXet" class="form-control" placeholder="Nhận xét">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Đăng nhận xét" class="btn btn-primary py-3">
@@ -166,3 +166,9 @@
         </div>
     </div>
 </section>
+
+<div class="row">
+    <div class="col-md-7 hotel-single mt-4 mb-5 ftco-animate">
+        <a href="/"><h2> Trở về trang chủ</h2></a>
+    </div>
+</div>
