@@ -5,5 +5,5 @@ exports.info = async (req, res, next) => {
     const id = req.params['id'];
     const HOTEL = await hotel.detail(id);
     const PLACE = await place.detail(HOTEL.idDiaDanh);
-    res.render('hotel/info', {HOTEL,PLACE}); 
+    res.render('hotel/info', {HOTEL,PLACE,user:req.user}); 
 };

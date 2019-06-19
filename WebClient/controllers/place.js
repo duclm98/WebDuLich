@@ -9,15 +9,24 @@ exports.info = async (req, res, next) => {
     const COMMENTS = await comment.list(id);
     const HOTELS = await hotel.listByIdDiaDanh(id);
     const RESTAURANTS = await restaurant.listByIdDiaDanh(id);
-    res.render('place/info', {PLACE,COMMENTS,HOTELS,RESTAURANTS}); 
+    res.render('place/info', {PLACE,COMMENTS,HOTELS,RESTAURANTS,user:req.user}); 
 };
 
 exports.comment = async (req, res, next) => {
     const id = req.params['id'];
     const PLACE = await place.detail(id);
+    var TEN_USER = "";
+    var EMAIL = "";
+    if(req.user){
+        TEN_USER=req.user.ten;
+        EMAIL=req.user.email;
+    }
+    else{
+        TEN_USER=req.body.tenUser;
+    }
     const cmt = {
-        tenUser:req.body.tenUser,
-        email:req.body.email,
+        tenUser:TEN_USER,
+        email:EMAIL,
         nhanXet:req.body.nhanXet,
         idDiaDanh:id,
         tenDiaDanh:PLACE.ten,

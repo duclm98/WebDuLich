@@ -6,7 +6,7 @@ exports.home = async (req, res, next) => {
     const places = await place.list();
     const hotels = await hotel.list();
     const restaurants = await restaurant.list();
-    res.render('index', {places,hotels,restaurants}); 
+    res.render('index', {places,hotels,restaurants,user:req.user}); 
 };
 
 exports.search = async (req, res, next) => {
@@ -15,5 +15,5 @@ exports.search = async (req, res, next) => {
     const places = await place.search(key);
     const hotels = await hotel.list();
     const restaurants = await restaurant.list();
-    res.render('index', {places,hotels,restaurants}); 
+    res.render('index', {places,hotels,restaurants,user:req.user}); 
 };

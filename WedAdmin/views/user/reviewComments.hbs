@@ -17,9 +17,9 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>Tên người dùng</th>
-                    <th>Email</th>
                     <th>Tên địa danh</th>
+                    <th>Tên người nhận xét</th>
+                    <th>Email</th>
                     <th>Nhận xét</th>
                     <th></th>
                     <th></th>
@@ -30,8 +30,8 @@
                 {{#each data}}
                 <tr>
                     <th scope="row">{{this.tenDiaDanh}}</th>
+                    <td>{{this.tenUser}}</td>
                     <td>{{this.email}}</td>
-                    <td>{{this.tenDiaDanh}}</td>
                     <td>{{this.nhanXet}}</td>
                     <td><a href="/user/review/{{this._id}}">Duyệt nhận xét</a></td>
                     <td><a href="/user/delete/{{this._id}}">Xóa nhận xét</a></td>

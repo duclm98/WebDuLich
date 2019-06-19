@@ -39,8 +39,30 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="/" class="nav-link">Trang chủ</a></li>
-	          <li class="nav-item"><a href="/" class="nav-link">Địa danh nổi tiếng</a></li>
+	          <li class="nav-item"><a href="/"><button type="button" class="btn btn-primary">Trang chủ</button></a></li>
+            <li>
+              {{#if user}}
+                <div class="dropdown nav-item">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    {{user.email}}
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Chi tiết tài khoản</a>
+                    <a class="dropdown-item" href="/users/logout">Đăng xuất</a>
+                  </div>
+                </div>
+                {{else}}
+                  <div class="dropdown nav-item">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                      Tài khoản của tôi
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/users/login">Đăng nhập</a>
+                      <a class="dropdown-item" href="/users/signUp">Đăng kí</a>
+                    </div>
+                  </div>
+              {{/if}}
+            </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -128,5 +150,6 @@
     <script src="../../https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="../../js/google-map.js"></script>
     <script src="../../js/main.js"></script>  
+    <script src="../../js/code.js"></script>  
   </body>
 </html>

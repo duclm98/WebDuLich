@@ -20,9 +20,10 @@
                     <th>Tên địa danh</th>
                     <th>Vị trí</th>
                     <th>Mô tả</th>
-                    <th>Bản đồ</th>
+                    <th>Gợi ý du lịch</th>
                     <th>Hình ảnh</th>
                     <th>Video</th>
+                    <th>Bản đồ</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,9 +33,10 @@
                     <th scope="row">{{this.ten}}</th>
                     <td>{{this.viTri}}</td>
                     <td>{{this.moTa}}</td>
-                    <td><a href="{{this.banDo}}">{{this.banDo}}</a></td>
-                    <td><a href="{{this.hinhAnh}}">{{this.hinhAnh}}</a></td>
-                    <td><a href="{{this.video}}">{{this.video}}</a></td>
+                    <td>{{this.goiY}}</td>
+                    <td><img id="photo" src="{{this.hinhAnh}}"></td>
+                    <td><iframe width="200" height="150" src="{{this.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                    <td><iframe src="{{this.banDo}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></td>
                 </tr>
                 {{/each}}
                 {{/if}}
