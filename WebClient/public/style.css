@@ -18,3 +18,7 @@
     width: 350px;
     overflow: auto;
 }
+
+#error{
+    color: red;
+}
